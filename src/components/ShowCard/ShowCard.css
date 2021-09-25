@@ -1,0 +1,19 @@
+.show-card{
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid gray;
+    border-radius: 9px;
+    background-color: lavender;
+    margin: 0 0 9px 9px;
+
+}
+.card-image img{
+    /* border-radius: 50%; */
+    width: 150px;
+    /* height: 250px; */
+}
+.card-details{
+    margin-left: 11px;
+}
