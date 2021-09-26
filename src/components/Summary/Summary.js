@@ -6,7 +6,6 @@ import './Summary.css'
 
 const Summary = (props) => {
     const {cart} = props;
-    console.log(cart);
     let totalCost = 0;
     let name = [];
     for(const developer of cart){
