@@ -6,28 +6,39 @@ import './Card.css';
 
 const Card = () => {
     const [items, setItems] = useState([]);
+    const [cart, setCart] = useState([]);
     useEffect(()=>{
         fetch('./developers.JSON')
         .then(res => res.json())
         .then(data => setItems(data))
       },[]);
 
-    const getItem =items =>{
-        console.log(items);
+    const getItem =item =>{
+        // console.log(item);
+        const newCart = [...cart, item];
+        setCart(newCart);
     }
     return (
-        <div className='card-container'>
-            <div className='my-card'>
-                {items.map(item => <ShowCard
-                key = {item.key}
-                item = {item}
-                getItem = {getItem}
-                ></ShowCard>)}
+        <div>
+            <div className='card-container'>
+                <div className='my-card'>
+                    {items.map(item => <ShowCard
+                    key = {item.key}
+                    item = {item}
+                    getItem = {getItem}
+                    ></ShowCard>)}
+
+                </div>
+
+                <div className="summary-container">
+                    <Summary cart={cart}></Summary>
+                    {/* <h3>Order Summary</h3>
+                    <h4>Items ordered:{cart.length}</h4>
+                    <h4>total cost:</h4> */}
+                </div>
+            
 
             </div>
-
-            
-            <Summary></Summary>
 
         </div>
     );

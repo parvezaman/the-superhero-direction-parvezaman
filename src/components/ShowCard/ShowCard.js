@@ -9,9 +9,9 @@ import { AiFillLinkedin, AiFillTwitterSquare, AiFillYoutube,AiFillFacebook } fro
 const shoppingCart = <FontAwesomeIcon icon={faShoppingCart} />
 
 const ShowCard = (props) => {
-    console.log(props);
+    // console.log(props);
     const {born,image, inventor,name,nationality,salary } = props.item;
-    const {getItem} = props;
+    // const {getItem} = props;
     return (
         <div>
             <div className='show-card'>
@@ -31,7 +31,7 @@ const ShowCard = (props) => {
                 </div>
                 <div className='card-lower-segment'>
                     <hr />
-                    <button onClick={()=>getItem(name)}>{shoppingCart} Add to Cart</button>
+                    <button onClick={()=>props.getItem(props.item)}>{shoppingCart} Add to Cart</button>
                     <hr />
                     <div className="bottom-icons">
                         <AiFillFacebook className='facebook'/> 
