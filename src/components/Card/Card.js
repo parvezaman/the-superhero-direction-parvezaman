@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ShowCard from '../ShowCard/ShowCard';
+import Summary from '../Summary/Summary';
 // import { useEffect } from 'react';
 import './Card.css';
 
@@ -15,12 +16,19 @@ const Card = () => {
         console.log(items);
     }
     return (
-        <div className='my-card'>
-            {items.map(item => <ShowCard
-            key = {item.key}
-            item = {item}
-            getItem = {getItem}
-            ></ShowCard>)}
+        <div className='card-container'>
+            <div className='my-card'>
+                {items.map(item => <ShowCard
+                key = {item.key}
+                item = {item}
+                getItem = {getItem}
+                ></ShowCard>)}
+
+            </div>
+
+            
+            <Summary></Summary>
+
         </div>
     );
 };
