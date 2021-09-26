@@ -7,12 +7,4 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 5px;
-    /* width: 1050px; */
 }
-/* .summary-container{
-    position: fixed;
-    margin-left: auto;
-    background-color: gray;
-    padding: 25px;
-    border-radius: 5px;
-} */
