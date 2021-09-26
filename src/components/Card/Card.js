@@ -21,6 +21,7 @@ const Card = () => {
     return (
         <div>
             <div className='card-container'>
+                {/* to get cards */}
                 <div className='my-card'>
                     {items.map(item => <ShowCard
                     key = {item.key}
@@ -29,12 +30,9 @@ const Card = () => {
                     ></ShowCard>)}
 
                 </div>
-
+                        {/* to get the summery section on the right */}
                 <div className="summary-container">
                     <Summary cart={cart}></Summary>
-                    {/* <h3>Order Summary</h3>
-                    <h4>Items ordered:{cart.length}</h4>
-                    <h4>total cost:</h4> */}
                 </div>
             
 

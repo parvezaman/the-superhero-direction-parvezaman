@@ -4,14 +4,14 @@ import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+
+// react icons
 import { AiFillLinkedin, AiFillTwitterSquare, AiFillYoutube,AiFillFacebook } from "react-icons/ai";
 
 const shoppingCart = <FontAwesomeIcon icon={faShoppingCart} />
 
 const ShowCard = (props) => {
-    // console.log(props);
     const {born,image, inventor,name,nationality,salary } = props.item;
-    // const {getItem} = props;
     return (
         <div>
             <div className='show-card'>

@@ -1,5 +1,6 @@
 import React from 'react';
 
+// react icons
 import { FaOpencart } from "react-icons/fa";
 import './Summary.css'
 
